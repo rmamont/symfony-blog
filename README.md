@@ -7,4 +7,4 @@
 «Создание блога на Symfony 2.8.1 lts»
 
 Источник: https://habrahabr.ru/post/301760/
-Github: https://github.com/AntoscencoVladimir/symfony-blog
+Репозиторий Github: https://github.com/AntoscencoVladimir/symfony-blog
