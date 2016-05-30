@@ -5,8 +5,8 @@
 /app/logs/*
 !app/cache/.gitkeep
 !app/logs/.gitkeep
-bin/*
-vendor/*
+/bin/*
+/vendor/*
 /web/bundles/
 /composer.lock
 .idea/
