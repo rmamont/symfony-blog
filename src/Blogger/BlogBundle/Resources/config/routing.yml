@@ -1,14 +1,14 @@
 BloggerBlogBundle_homepage:
     path:     /
     defaults: { _controller: BloggerBlogBundle:Page:index }
-    methods: [GET]
+    methods:  [GET]
 
 BloggerBlogBundle_about:
     path:     /about
     defaults: { _controller: BloggerBlogBundle:Page:about }
-    methods: [GET]
+    methods:  [GET]
 
 BloggerBlogBundle_contact:
     path:     /contact
     defaults: { _controller: BloggerBlogBundle:Page:contact }
-    methods: [GET]
+    methods:  [GET]
