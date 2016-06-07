@@ -7,3 +7,8 @@ BloggerBlogBundle_about:
     path:     /about
     defaults: { _controller: BloggerBlogBundle:Page:about }
     methods: [GET]
+
+BloggerBlogBundle_contact:
+    path:     /contact
+    defaults: { _controller: BloggerBlogBundle:Page:contact }
+    methods: [GET]
