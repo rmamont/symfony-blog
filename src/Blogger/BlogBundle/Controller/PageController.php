@@ -31,6 +31,16 @@ class PageController extends Controller
             $form->handleRequest($request);
 
             if ($form->isValid()) {
+                $message = \Swift_Message::newInstance()
+                    ->setSubject('Сообщение из формы symblog')
+                    ->setFrom('enquiries@symblog.dev')
+                    ->setTo($this->container->getParameter('blogger_blog.emails.contact_email'))
+                    ->setBody($this->renderView('BloggerBlogBundle:Page:contactEmail.txt.twig', array('enquiry' => $enquiry)));
+
+                $this->get('mailer')->send($message);
+
+                $this->get('session')->getFlashBag()->add('blogger-notice', 'Ваше сообщение было успешно отправлено. Спасибо.');
+
                 return $this->redirect($this->generateUrl('BloggerBlogBundle_contact'));
             }
         }
