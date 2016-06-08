@@ -4,6 +4,11 @@ namespace Blogger\BlogBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
+use Symfony\Component\HttpFoundation\Request;
+use Blogger\BlogBundle\Entity\Enquiry;
+use Blogger\BlogBundle\Form\EnquiryType;
+
+
 class PageController extends Controller
 {
     public function indexAction()
@@ -16,8 +21,22 @@ class PageController extends Controller
         return $this->render('BloggerBlogBundle:Page:about.html.twig');
     }
 
-    public function contactAction()
+    public function contactAction(Request $request)
     {
-        return $this->render('BloggerBlogBundle:Page:contact.html.twig');
+        $enquiry = new Enquiry();
+
+        $form = $this->createForm(EnquiryType::class, $enquiry);
+
+        if ($request->isMethod($request::METHOD_POST)) {
+            $form->handleRequest($request);
+
+            if ($form->isValid()) {
+                return $this->redirect($this->generateUrl('BloggerBlogBundle_contact'));
+            }
+        }
+
+        return $this->render('BloggerBlogBundle:Page:contact.html.twig', array(
+            'form' => $form->createView()
+        ));
     }
 }
