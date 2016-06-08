@@ -1,0 +1,48 @@
+.blogger-notice {
+    text-align: center;
+    padding: 0.6em;
+    background: #dff2bf;
+    border: 1px solid;
+    color: #4f8a10;
+    margin-bottom: 0.6em;
+}
+form.blogger {
+    font-size: 1em;
+}
+form.blogger div {
+    clear: left;
+    margin-bottom: 0.6em;
+}
+form.blogger label {
+    float: left;
+    margin-right: 0.6em;
+    text-align: right;
+    width: 6em;
+    font-weight: bold;
+    vertical-align: top;
+    padding-top: 0.6em;
+}
+form.blogger input[type="text"],
+form.blogger input[type="email"] {
+    width: 500px;
+    line-height: 1.6em;
+    font-size: 1.2em;
+    min-height: 1.2em;
+}
+form.blogger textarea {
+    width: 500px;
+    height: 150px;
+    line-height: 1.6em;
+    font-size: 1.2em;
+}
+form.blogger input[type="submit"] {
+    margin-left: 110px;
+    width: 508px;
+    line-height: 1.6em;
+    font-size: 1.2em;
+    min-height: 1.6em;
+}
+form.blogger ul li {
+    color: #ff0000;
+    margin-bottom: 5px;
+}
